@@ -282,6 +282,7 @@ pnpm dev
 > **📚 상세 가이드**:
 > - `docs/clerk-supabase-integration.md`: Clerk + Supabase 통합 가이드
 > - `docs/supabase-nextjs-integration.md`: Supabase + Next.js 통합 가이드
+> - `docs/vercel-deployment.md`: Vercel 배포 가이드
 
 ### 개발 명령어
 
@@ -348,6 +349,25 @@ Clerk에서 추가 로그인 방식을 활성화하려면:
 3. OAuth 자격 증명 입력 (제공자 개발자 콘솔에서 생성)
 4. **Enable** 클릭
 
+### Vercel 배포
+
+프로젝트는 Vercel CLI를 통해 배포할 수 있습니다.
+
+**빠른 배포:**
+
+```bash
+# 프로덕션 배포
+vercel --prod
+```
+
+**환경 변수 설정:**
+
+Vercel 대시보드에서 환경 변수를 설정해야 합니다:
+- Clerk 환경 변수 (NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY, CLERK_SECRET_KEY 등)
+- Supabase 환경 변수 (NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY 등)
+
+> **📚 상세 가이드**: `docs/vercel-deployment.md` 파일에서 Vercel 배포 및 환경 변수 설정 방법을 확인할 수 있습니다.
+
 ## 프로젝트 구조
 
 ```
@@ -409,5 +429,6 @@ saas-template/
 - [Supabase 문서](https://supabase.com/docs)
 - [shadcn/ui 문서](https://ui.shadcn.com/)
 - [Tailwind CSS v4 문서](https://tailwindcss.com/docs)
-#   1 2 0 3 o z  
+#   1 2 0 3 o z 
+ 
  
