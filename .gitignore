@@ -62,3 +62,8 @@ repomix-output.xml
 
 # clerk configuration (can include secrets)
 /.clerk/
+
+.vercel
+
+# 중첩된 git 저장소
+1203oz/

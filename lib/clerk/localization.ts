@@ -1,5 +1,4 @@
 import { koKR } from "@clerk/localizations";
-import type { LocalizationResource } from "@clerk/types";
 
 /**
  * Clerk 한국어 커스텀 로컬라이제이션
@@ -7,17 +6,8 @@ import type { LocalizationResource } from "@clerk/types";
  * 기본 koKR 로컬라이제이션을 확장하여 브랜드에 맞게 커스터마이징할 수 있습니다.
  * 
  * @see https://clerk.com/docs/guides/customizing-clerk/localization
- * 
- * @example
- * ```tsx
- * import { customKoKR } from '@/lib/clerk/localization';
- * 
- * <ClerkProvider localization={customKoKR}>
- *   {/* ... */}
- * </ClerkProvider>
- * ```
  */
-export const customKoKR: LocalizationResource = {
+export const customKoKR = {
   ...koKR,
   
   // 원하는 문자열만 커스터마이징할 수 있습니다
@@ -29,7 +19,7 @@ export const customKoKR: LocalizationResource = {
     // 특정 에러 메시지만 커스터마이징
     // not_allowed_access: "접근이 허용되지 않습니다. 관리자에게 문의하세요.",
   },
-};
+} as typeof koKR;
 
 /**
  * 기본 한국어 로컬라이제이션 (커스터마이징 없이)
